@@ -88,6 +88,12 @@ initGlobalData data =
     , canvasAttributes = []
     , extraHTML = Nothing
     , userData = storage
+    , camera =
+        { x = virtualSize.width / 2
+        , y = virtualSize.height / 2
+        , zoom = 1
+        , rotation = 0
+        }
     }
 
 
@@ -105,7 +111,7 @@ saveGlobalData globalData =
 -}
 fboNum : Int
 fboNum =
-    5
+    10
 
 
 {-| Builtin programs that are enabled.
