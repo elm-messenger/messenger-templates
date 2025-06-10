@@ -2,11 +2,17 @@
 
 v=$(pnpm view elm-regl-js version)
 
+echo "elm-regl-js version $v"
+
 html=$(curl -s https://package.elm-lang.org/packages/linsyking/messenger-core/latest)
 core_version=$(echo "$html" | grep -oP '(?<=<title>messenger-core )[^<]+')
 
+echo "core version $core_version"
+
 html=$(curl -s https://package.elm-lang.org/packages/linsyking/elm-regl/latest)
 regl_version=$(echo "$html" | grep -oP '(?<=<title>elm-regl )[^<]+')
+
+echo "regl version $regl_version"
 
 sed -E -i "s/(\"linsyking\/elm-regl\":\s*\")([^\"]+)(\")/\1${regl_version}\3/" elm.json
 
