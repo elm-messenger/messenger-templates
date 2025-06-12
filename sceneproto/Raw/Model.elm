@@ -6,11 +6,11 @@ module SceneProtos.$0.Model exposing (genScene)
 
 -}
 
-import REGL
 import Lib.Base exposing (SceneMsg)
 import Lib.UserData exposing (UserData)
 import Messenger.Scene.RawScene exposing (RawSceneProtoInit, RawSceneProtoLevelInit, RawSceneUpdate, RawSceneView, genRawScene, initCompose)
 import Messenger.Scene.Scene exposing (MConcreteScene, SceneStorage)
+import REGL
 import SceneProtos.$0.Init exposing (InitData)
 
 

@@ -6,10 +6,10 @@ module $0.$1.$2.$3.Model exposing (component)
 
 -}
 
-import REGL
 import Lib.Base exposing (SceneMsg)
 import Lib.UserData exposing (UserData)
 import Messenger.Component.Component exposing (ComponentInit, ComponentMatcher, ComponentStorage, ComponentUpdate, ComponentUpdateRec, ComponentView, ConcreteUserComponent, genComponent)
+import REGL
 import $0.$1.$2.ComponentBase exposing (BaseData, ComponentMsg, ComponentTarget)
 import $0.$1.SceneBase exposing (SceneCommonData)
 

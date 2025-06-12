@@ -6,11 +6,11 @@ module Scenes.$0.Model exposing (scene)
 
 -}
 
-import REGL
 import Lib.Base exposing (SceneMsg)
 import Lib.UserData exposing (UserData)
 import Messenger.Scene.RawScene exposing (RawSceneInit, RawSceneUpdate, RawSceneView, genRawScene)
 import Messenger.Scene.Scene exposing (MConcreteScene, SceneStorage)
+import REGL
 
 
 type alias Data =
