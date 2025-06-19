@@ -10,7 +10,7 @@ import Lib.Base exposing (SceneMsg)
 import Lib.UserData exposing (UserData)
 import Messenger.Scene.RawScene exposing (RawSceneProtoInit, RawSceneProtoLevelInit, RawSceneUpdate, RawSceneView, genRawScene, initCompose)
 import Messenger.Scene.Scene exposing (MConcreteScene, SceneStorage)
-import REGL
+import REGL.BuiltinPrograms as P
 import SceneProtos.$0.Init exposing (InitData)
 
 
@@ -30,7 +30,7 @@ update env msg data =
 
 view : RawSceneView UserData Data
 view env data =
-    REGL.empty
+    P.empty
 
 
 scenecon : RawSceneProtoLevelInit UserData SceneMsg InitData -> MConcreteScene Data UserData SceneMsg

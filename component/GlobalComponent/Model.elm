@@ -9,7 +9,7 @@ module GlobalComponents.$0.Model exposing (InitOption, genGC)
 import Json.Encode as E
 import Messenger.Component.GlobalComponent exposing (genGlobalComponent)
 import Messenger.Scene.Scene exposing (ConcreteGlobalComponent, GCTarget, GlobalComponentInit, GlobalComponentStorage, GlobalComponentUpdate, GlobalComponentUpdateRec, GlobalComponentView)
-import REGL
+import REGL.BuiltinPrograms as P
 
 
 {-| Init Options
@@ -43,7 +43,7 @@ updaterec env _ data bdata =
 
 view : GlobalComponentView userdata scenemsg Data
 view _ data _ =
-    REGL.empty
+    P.empty
 
 
 gcCon : InitOption -> ConcreteGlobalComponent Data userdata scenemsg

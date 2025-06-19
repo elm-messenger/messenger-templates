@@ -12,7 +12,7 @@ import Lib.Base exposing (SceneMsg)
 import Lib.UserData exposing (UserData)
 import Messenger.GeneralModel exposing (Matcher)
 import Messenger.Layer.Layer exposing (ConcreteLayer, LayerInit, LayerStorage, LayerUpdate, LayerUpdateRec, LayerView, genLayer)
-import REGL
+import REGL.BuiltinPrograms as P
 import $0.$1.SceneBase exposing (..)
 
 
@@ -37,7 +37,7 @@ updaterec env msg data =
 
 view : LayerView SceneCommonData UserData Data
 view env data =
-    REGL.empty
+    P.empty
 
 
 matcher : Matcher Data LayerTarget
