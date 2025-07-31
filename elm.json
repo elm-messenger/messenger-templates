@@ -11,7 +11,7 @@
             "linsyking/elm-regl": "10.0.0",
             "avh4/elm-color": "1.0.0",
             "ianmackenzie/elm-units": "2.10.0",
-            "linsyking/messenger-core": "17.1.2"
+            "linsyking/messenger-core": "17.1.3"
         },
         "indirect": {
             "elm/html": "1.0.0",
