@@ -16,7 +16,7 @@ import Messenger.Resources.Base exposing (ResourceDef(..), ResourceDefs)
 -}
 resources : ResourceDefs
 resources =
-    allTexture ++ allAudio ++ allFont ++ allProgram
+    allTexture ++ allAudio ++ allFont ++ allProgram ++ allData
 
 
 {-| allTexture
@@ -75,4 +75,17 @@ Example:
 -}
 allProgram : ResourceDefs
 allProgram =
+    []
+
+
+{-| All data files.
+
+Example:
+
+        [ ( "level1", DataRes "assets/data/level1.json" )
+        ]
+
+-}
+allData : ResourceDefs
+allData =
     []

@@ -40,6 +40,21 @@ function startmessenger(appname) {
             ElmREGL.execCmd(v);
         });
     }
+    if (app.ports.loadDataFile) {
+        app.ports.loadDataFile.subscribe(function (v) {
+            fetch(v.path)
+                .then(function (r) {
+                    if (!r.ok) throw new Error('Failed to load ' + v.path);
+                    return r.text();
+                })
+                .then(function (text) {
+                    app.ports.dataFileLoaded.send({ name: v.name, data: text });
+                })
+                .catch(function (_err) {
+                    app.ports.dataFileLoaded.send({ name: v.name, data: '' });
+                });
+        });
+    }
     const canvas = document.getElementById('elm-regl-canvas');
     ElmREGL.init(canvas, app, []);
 
